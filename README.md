@@ -16,6 +16,8 @@ Bereitgestellt werden Informationen zur selben Thematik oft an unterschiedlichen
 
 Zielsetzung:
 
-Nutzer des Systems sollen ein effektives Tool erhalten mit dem sie effizient den gesuchten Ort (Raum, Halle, Saal, etc.) finden können. Das betreffende Gebäude soll plastisch und übersichtlich dargestellt werden. Das Interface soll dabei eine simple und intuitive Bedienung begünstigen. Die gesuchten Informationen sollen gebündelt und am geeigneten Ort (bspw. TH Köln → “Campus Planer” ) bereitgestellt werden.
+Nutzer des Systems sollen ein effektives Tool erhalten mit dem sie effizient den gesuchten Ort (Raum, Halle, Saal, etc.) finden können. Das betreffende Gebäude soll plastisch und übersichtlich dargestellt werden. Das Interface soll dabei eine simple und intuitive Bedienung begünstigen. Die gesuchten Informationen sollen gebündelt und am geeigneten Ort (bspw. TH Köln → “Campus Planer” ) bereitgestellt werden. Das System erfordert ein 3D-fähiges Endgerät mit Display und Eingabemöglichkeit.
+
+Das Pilotprojekt umfasst zunächst den Campus Gummersbach der TH Köln. Dieser wird in dreidimensionaler Form auf dem Display des Endgeräts dargestellt. Nach Eingabe des gesuchten Raums und, wenn bekannt, auch des aktuellen Standorts auf dem Gelände soll ein Marker den Raum im Gebäude anzeigen. Eine Linie zeigt dann den kürzesten Weg zwischen den Orten an. Ist kein aktueller Standort angegeben (bzw. bekannt) kann ein lokaler und bekannter Ort (Foyer, Innenhof, Parkplatz) hierfür verwendet werden.
 
 
