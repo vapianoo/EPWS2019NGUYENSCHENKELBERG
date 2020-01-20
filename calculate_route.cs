@@ -19,12 +19,6 @@ public class calculate_route
 
         // add nodes to route / list
 
-        routeArray.Add(positional_data.position_1);
-        routeArray.Add(positional_data.position_2);
-        routeArray.Add(positional_data.position_3);
-        routeArray.Add(positional_data.position_4);
-        routeArray.Add(positional_data.position_5);
-
         return routeArray;
     }
 
