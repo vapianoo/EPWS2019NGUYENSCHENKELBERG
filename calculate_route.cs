@@ -19,10 +19,16 @@ public class calculate_route
 
         // add nodes to route / list
 
+        routeArray.Add(positional_data.position_1);
+        routeArray.Add(positional_data.position_2);
+        routeArray.Add(positional_data.position_3);
+        routeArray.Add(positional_data.position_4);
+        routeArray.Add(positional_data.position_5);
+
         return routeArray;
     }
 
-    public static graph calculateShortestPathFromSource(graph dGraph, node source)
+    public static graph calculateShortestPathFromSource(graph routeGraph, node source)
     {
         source.setDistance(0);
 
@@ -35,7 +41,7 @@ public class calculate_route
         {
             node currentNode = getLowestDistanceNode(unsettledNodes);
             unsettledNodes.Remove(currentNode);
-            foreach(KeyValuePair<node, int> entry in currentNode.adjacentNodes)
+            foreach(KeyValuePair<node, float> entry in currentNode.adjacentNodes)
             {
                 node adjacentNode = entry.Key;
                 if (!settledNodes.Contains(adjacentNode))
@@ -48,20 +54,20 @@ public class calculate_route
             settledNodes.AddLast(currentNode);
         }
 
-        return dGraph;
+        return routeGraph;
     }
 
     public static node getLowestDistanceNode(LinkedList<node> unsettledNodes)
     {
         node lowestDistanceNode = null;
-        int lowestDistance = int.MaxValue;
+        float lowestDistance = float.MaxValue;
 
         LinkedListNode<node> currentNode = unsettledNodes.First;
 
 
         while(currentNode != null)
         {
-            int nodeDistance = currentNode.Value.distance;
+            float nodeDistance = currentNode.Value.distance;
             if (nodeDistance < lowestDistance)
             {
                 lowestDistance = nodeDistance;
@@ -74,9 +80,9 @@ public class calculate_route
         return lowestDistanceNode;
     }
 
-    public static void calculateMinimumDistance(node evaluationNode, int edgeWeight, node sourceNode)
+    public static void calculateMinimumDistance(node evaluationNode, float edgeWeight, node sourceNode)
     {
-        int sourceDistance = sourceNode.distance;
+        float sourceDistance = sourceNode.distance;
 
         if(sourceDistance + edgeWeight < evaluationNode.distance)
         {
